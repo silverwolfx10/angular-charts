@@ -72,12 +72,7 @@ describe('angularCharts', function() {
     return $compile(body)($scope)
   }
 
-  it('should throw width/height error', function() {
-    expect(compileChart).toThrow()
-  })
-
-  it('should throw width/height error', function() {
-    angular.element(document.body).append('<style type="text/css">#chart { width:150px; height: 300px}</style>')
+  it('should not throw width/height error', function() {
     expect(compileChart).not.toThrow()
   })
 
